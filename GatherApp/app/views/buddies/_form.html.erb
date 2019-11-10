@@ -1,0 +1,32 @@
+<%= form_with(model: buddy, local: true) do |form| %>
+  <% if buddy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(buddy.errors.count, "error") %> prohibited this buddy from being saved:</h2>
+
+      <ul>
+      <% buddy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :buddy_first_name %>
+    <%= form.text_field :buddy_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buddy_last_name %>
+    <%= form.text_field :buddy_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buddy_email %>
+    <%= form.text_field :buddy_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
