@@ -19,5 +19,9 @@ class StaticsController < ApplicationController
   end
   
   def about
-  end 
+  end
+  
+  def friends
+  #  @friends = #query to grab a collection of friends from curretn user if logged in
+  end
 end

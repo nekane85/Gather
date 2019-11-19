@@ -1,24 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-      
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
     
-  </head>
+     <!-- Assest pipeline to CSS for home.html  -->
+     <% if controller_name == "application" && action_name == "home" %>
+     <%= stylesheet_link_tag "home" %>
+     <% end %>
 
-  <body>
 
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <!-- <h5 class="my-0 mr-md-auto font-weight-normal">Gather</h5> -->
-      <a class="my-0 mr-md-auto font-weight-normal" href="home.html">Gather</a>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">About</a>
-        <a class="p-2 text-dark" href="#">Contact</a>
-      </nav>
-      <a class="btn btn-outline-primary" href="#">Sign Out</a>
-    </div>
 
    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Student Name, Welcome!</h1>
@@ -121,13 +108,6 @@
 </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
@@ -136,5 +116,3 @@
         text: 'Thumbnail'
       });
     </script>
-  </body>
-</html>
