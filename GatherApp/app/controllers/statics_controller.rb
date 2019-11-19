@@ -8,6 +8,11 @@ class StaticsController < ApplicationController
   end
 
   def home
+    # this is just a comment
+    # this is another comment
+    # and this is a third comment
+    # NOTE: there's nothing special about these # symbols, 
+    # only that they're defined as comments in Ruby
   end 
   
   def contact
