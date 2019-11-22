@@ -1,19 +1,126 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-100.times do |i|
-Student.create(student_first_name: Faker::Name.first_name,  student_last_name: Faker::Name.last_name, student_email: Faker::Internet.email).save
-end
-#buddyies
-10.times do |i|
-  Buddy.create(buddy_first_name: Faker::Name.first_name,  buddy_last_name: Faker::Name.last_name, buddy_email: Faker::Internet.email).save
-end
-#admin
-5.times do |i|
- Admin.create(admin_first_name: Faker::Name.first_name,  admin_last_name: Faker::Name.last_name, admin_email: Faker::Internet.email).save
-end
+User.create!([
+  {email: "nick@nick.com", encrypted_password: "$2a$11$DU0QJBQ5NE2sUB16JDf6x.wDCudh36EsREQcKofnsfMqpd.NQ9KPy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 1},
+  {email: "nick2@nick", encrypted_password: "$2a$11$VGE.gcfezqjqGrB7v09xGeVQfdPdQzZ5FO.uxRU/HrDOfRz3MkLq2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 0},
+  {email: "nick3@nick.com", encrypted_password: "$2a$11$RreMp/foIsMUqg/74aBIXeWl8a0oScNTfPtelrQtkXGWO.fj/R5Kq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 0}
+])
+Admin.create!([
+  {admin_first_name: "Michael", admin_last_name: "Schmeler", admin_email: "simon_beer@runolfon.biz"},
+  {admin_first_name: "Meggan", admin_last_name: "Jaskolski", admin_email: "raina@gerholdwalker.co"},
+  {admin_first_name: "Eusebia", admin_last_name: "Lind", admin_email: "tifany_becker@torp.net"},
+  {admin_first_name: "Willis", admin_last_name: "Turner", admin_email: "celina.harvey@osinskikeler.co"},
+  {admin_first_name: "Pamula", admin_last_name: "Erdman", admin_email: "cheryll_schowalter@rutherfordmurazik.org"}
+])
+Buddy.create!([
+  {buddy_first_name: "Keneth", buddy_last_name: "Nienow", buddy_email: "carolin.walsh@pacocha.com"},
+  {buddy_first_name: "Armando", buddy_last_name: "Keebler", buddy_email: "lance@rutherfordmarks.co"},
+  {buddy_first_name: "Stanton", buddy_last_name: "Okuneva", buddy_email: "xochitl@nitzschespencer.biz"},
+  {buddy_first_name: "Virgilio", buddy_last_name: "Kunze", buddy_email: "alton@vandervort.io"},
+  {buddy_first_name: "Lewis", buddy_last_name: "Lebsack", buddy_email: "quintin@hamill.co"},
+  {buddy_first_name: "Taisha", buddy_last_name: "Windler", buddy_email: "justin.ziemann@gulgowskikris.org"},
+  {buddy_first_name: "Timmy", buddy_last_name: "Connelly", buddy_email: "graig.robel@johns.org"},
+  {buddy_first_name: "Sydney", buddy_last_name: "Kilback", buddy_email: "laverne@bartellschuppe.io"},
+  {buddy_first_name: "Doyle", buddy_last_name: "Pollich", buddy_email: "emilie_lockman@baumbachsmith.net"},
+  {buddy_first_name: "Shon", buddy_last_name: "Swift", buddy_email: "foster_leannon@braun.info"}
+])
+Student.create!([
+  {student_first_name: "Marcell", student_last_name: "Daugherty", student_email: "raymon@franeckihagenes.info"},
+  {student_first_name: "Stanford", student_last_name: "Corwin", student_email: "barney.moen@feeneyjacobi.net"},
+  {student_first_name: "Kira", student_last_name: "Ledner", student_email: "ahmed@christiansengreenholt.io"},
+  {student_first_name: "Sybil", student_last_name: "Bauch", student_email: "aleta.schowalter@pagacbeer.io"},
+  {student_first_name: "Cordia", student_last_name: "Dickinson", student_email: "patricia@maggiosporer.info"},
+  {student_first_name: "Cecile", student_last_name: "Pfannerstill", student_email: "gwen@mosciskipurdy.net"},
+  {student_first_name: "Rima", student_last_name: "Durgan", student_email: "leland@gerhold.net"},
+  {student_first_name: "Robby", student_last_name: "Renner", student_email: "jon@krajcik.co"},
+  {student_first_name: "Leon", student_last_name: "Wiegand", student_email: "alica@legrosemmerich.co"},
+  {student_first_name: "Sang", student_last_name: "Spinka", student_email: "arnita@towne.info"},
+  {student_first_name: "Letty", student_last_name: "Auer", student_email: "alan@wisozkhintz.biz"},
+  {student_first_name: "Carmel", student_last_name: "Mosciski", student_email: "kristofer.robel@willms.org"},
+  {student_first_name: "Mariah", student_last_name: "Kemmer", student_email: "emil@robelrunte.com"},
+  {student_first_name: "Sherrie", student_last_name: "Yundt", student_email: "miles_dooley@skilesdooley.co"},
+  {student_first_name: "Arnulfo", student_last_name: "Blanda", student_email: "gilberto@marvinshanahan.co"},
+  {student_first_name: "German", student_last_name: "Murphy", student_email: "darryl.renner@ondrickaullrich.org"},
+  {student_first_name: "Connie", student_last_name: "Mayert", student_email: "vicente_mcclure@baumbach.com"},
+  {student_first_name: "Nicki", student_last_name: "Schuppe", student_email: "chad@moriette.com"},
+  {student_first_name: "Eden", student_last_name: "Reichel", student_email: "penney_padberg@nadernikolaus.io"},
+  {student_first_name: "Armando", student_last_name: "Boyer", student_email: "horacio@pfannerstillromaguera.name"},
+  {student_first_name: "Shira", student_last_name: "McClure", student_email: "lemuel_champlin@gloveroberbrunner.com"},
+  {student_first_name: "Dave", student_last_name: "Welch", student_email: "kimber@heaney.org"},
+  {student_first_name: "Lilian", student_last_name: "Bergstrom", student_email: "darren_rosenbaum@beckerjerde.net"},
+  {student_first_name: "Cory", student_last_name: "Zboncak", student_email: "numbers.connelly@johns.biz"},
+  {student_first_name: "Jamison", student_last_name: "Will", student_email: "andres_gusikowski@maggiolang.biz"},
+  {student_first_name: "Caitlin", student_last_name: "Cruickshank", student_email: "rosa.swaniawski@beatty.net"},
+  {student_first_name: "Bertram", student_last_name: "Bernhard", student_email: "marchelle@waters.net"},
+  {student_first_name: "Roma", student_last_name: "Smith", student_email: "milia_mcdermott@rathritchie.net"},
+  {student_first_name: "Angel", student_last_name: "Flatley", student_email: "oswaldo@johns.io"},
+  {student_first_name: "Bryce", student_last_name: "Berge", student_email: "tomas_baumbach@rempel.org"},
+  {student_first_name: "Albert", student_last_name: "Turner", student_email: "janise@oreillyaufderhar.name"},
+  {student_first_name: "Madeline", student_last_name: "Beer", student_email: "bud.feest@ankunding.name"},
+  {student_first_name: "Jimmy", student_last_name: "Schiller", student_email: "lanette.harber@kovacekbatz.co"},
+  {student_first_name: "Joey", student_last_name: "Ortiz", student_email: "janetta.zulauf@jacobson.info"},
+  {student_first_name: "Kandice", student_last_name: "Hilll", student_email: "benny_crist@skiles.name"},
+  {student_first_name: "Lieselotte", student_last_name: "Bechtelar", student_email: "rochelle_christiansen@blockmoore.name"},
+  {student_first_name: "Monty", student_last_name: "Kub", student_email: "ulyes_gibson@conroy.biz"},
+  {student_first_name: "Eliseo", student_last_name: "Johns", student_email: "pricilla.steuber@kovacek.info"},
+  {student_first_name: "Patrick", student_last_name: "Tillman", student_email: "kiera@dibbert.name"},
+  {student_first_name: "Kara", student_last_name: "Murazik", student_email: "vance@harris.biz"},
+  {student_first_name: "Roxanne", student_last_name: "Flatley", student_email: "noah_graham@howellrunolfsdottir.biz"},
+  {student_first_name: "Royce", student_last_name: "Konopelski", student_email: "winnie.gleichner@hackett.org"},
+  {student_first_name: "Victor", student_last_name: "Ondricka", student_email: "teofila_fahey@kaulke.io"},
+  {student_first_name: "Rosalina", student_last_name: "Hilll", student_email: "jacelyn@riceschaden.net"},
+  {student_first_name: "Lucile", student_last_name: "Hilll", student_email: "rivka@rodriguezjakubowski.io"},
+  {student_first_name: "Karl", student_last_name: "Brekke", student_email: "doyle@barton.net"},
+  {student_first_name: "Coleman", student_last_name: "Klein", student_email: "michel@trantowklocko.biz"},
+  {student_first_name: "Taren", student_last_name: "Krajcik", student_email: "sondra.gaylord@murazik.biz"},
+  {student_first_name: "Julio", student_last_name: "Ziemann", student_email: "ramiro@howetowne.net"},
+  {student_first_name: "Beckie", student_last_name: "Labadie", student_email: "theo_zieme@roob.name"},
+  {student_first_name: "Marinda", student_last_name: "Cormier", student_email: "dewitt@flatley.co"},
+  {student_first_name: "Tiffaney", student_last_name: "Hamill", student_email: "gerard_runolfon@darefarrell.name"},
+  {student_first_name: "Patricia", student_last_name: "Sauer", student_email: "allena.kovacek@friesen.name"},
+  {student_first_name: "Joseph", student_last_name: "Klocko", student_email: "truman@champlin.org"},
+  {student_first_name: "Windy", student_last_name: "Paucek", student_email: "kattie@becker.co"},
+  {student_first_name: "Santo", student_last_name: "Weber", student_email: "pierre.botsford@schuppe.name"},
+  {student_first_name: "Harold", student_last_name: "Bayer", student_email: "devin_witting@ko.net"},
+  {student_first_name: "Everette", student_last_name: "Howell", student_email: "kory@lakin.org"},
+  {student_first_name: "Rossie", student_last_name: "Haley", student_email: "hank_franecki@corwinreichert.net"},
+  {student_first_name: "Trevor", student_last_name: "Farrell", student_email: "carey@nolanbalistreri.co"},
+  {student_first_name: "Arie", student_last_name: "Vandervort", student_email: "columbus@schulist.info"},
+  {student_first_name: "Aline", student_last_name: "Smith", student_email: "dominga_oberbrunner@jakubowskihomenick.co"},
+  {student_first_name: "Colette", student_last_name: "Mraz", student_email: "florence@denesik.info"},
+  {student_first_name: "Renay", student_last_name: "Jacobi", student_email: "verlene.romaguera@jacobsonhodkiewicz.info"},
+  {student_first_name: "Melissa", student_last_name: "Muller", student_email: "boyce@hane.io"},
+  {student_first_name: "Bryant", student_last_name: "Crooks", student_email: "modesto.tromp@sipes.io"},
+  {student_first_name: "Robt", student_last_name: "Schmeler", student_email: "byron_rath@langworth.io"},
+  {student_first_name: "Darren", student_last_name: "Spinka", student_email: "jeramy@oreilly.net"},
+  {student_first_name: "Gretchen", student_last_name: "Schimmel", student_email: "ian_hodkiewicz@pagac.com"},
+  {student_first_name: "Lindsay", student_last_name: "Stanton", student_email: "rod@quigleycruickshank.biz"},
+  {student_first_name: "Alexia", student_last_name: "Mante", student_email: "isa@terryschroeder.org"},
+  {student_first_name: "Rodolfo", student_last_name: "Wyman", student_email: "mirian@greenweber.com"},
+  {student_first_name: "Monserrate", student_last_name: "Wintheiser", student_email: "eddie.gulgowski@ornjohnson.info"},
+  {student_first_name: "Marisol", student_last_name: "Krajcik", student_email: "margery@christiansenhagenes.org"},
+  {student_first_name: "Katrice", student_last_name: "Cormier", student_email: "karey@wisoky.io"},
+  {student_first_name: "Mohammed", student_last_name: "Altenwerth", student_email: "magdalen.grimes@beier.org"},
+  {student_first_name: "Stevie", student_last_name: "Murphy", student_email: "krista_baumbach@casperortiz.net"},
+  {student_first_name: "Chi", student_last_name: "Lebsack", student_email: "emelina@medhurststanton.net"},
+  {student_first_name: "Adelina", student_last_name: "Pagac", student_email: "miesha@marquardtauer.com"},
+  {student_first_name: "Albina", student_last_name: "O'Keefe", student_email: "simone@haleyrosenbaum.com"},
+  {student_first_name: "Tracey", student_last_name: "Altenwerth", student_email: "katy.wilderman@wiegand.info"},
+  {student_first_name: "Dwight", student_last_name: "Hartmann", student_email: "reid@zulaufmayert.info"},
+  {student_first_name: "Carlos", student_last_name: "Bogan", student_email: "sung.reilly@nader.io"},
+  {student_first_name: "Michael", student_last_name: "Mayer", student_email: "jimmy_mckenzie@bogan.net"},
+  {student_first_name: "Collen", student_last_name: "Feil", student_email: "ward_bode@barrows.co"},
+  {student_first_name: "Delfina", student_last_name: "Howe", student_email: "janea_gerlach@stroman.com"},
+  {student_first_name: "Claud", student_last_name: "Schmidt", student_email: "barry_greenfelder@conroy.name"},
+  {student_first_name: "Roy", student_last_name: "Pacocha", student_email: "robby@gutmannrath.biz"},
+  {student_first_name: "Shayla", student_last_name: "Reilly", student_email: "latrisha@tromplubowitz.name"},
+  {student_first_name: "Pura", student_last_name: "Hahn", student_email: "leon_nitzsche@kunde.net"},
+  {student_first_name: "Jackson", student_last_name: "Nienow", student_email: "cyril_bode@mcdermott.info"},
+  {student_first_name: "Winston", student_last_name: "O'Reilly", student_email: "daisey@ruecker.biz"},
+  {student_first_name: "Vanita", student_last_name: "Rolfson", student_email: "felton@borer.io"},
+  {student_first_name: "Sun", student_last_name: "Schoen", student_email: "franklin.rice@weimann.net"},
+  {student_first_name: "Mee", student_last_name: "Cormier", student_email: "nelson@beattybrown.com"},
+  {student_first_name: "Gilma", student_last_name: "Schumm", student_email: "noble_beer@donnelly.info"},
+  {student_first_name: "Leandro", student_last_name: "Flatley", student_email: "blake@sanford.info"},
+  {student_first_name: "Mauro", student_last_name: "Walter", student_email: "victor_ratke@harber.net"},
+  {student_first_name: "Trey", student_last_name: "Conroy", student_email: "elbert@harris.org"},
+  {student_first_name: "Kyung", student_last_name: "Rempel", student_email: "richard@reinger.org"}
+])
