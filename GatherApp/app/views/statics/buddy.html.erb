@@ -1,0 +1,88 @@
+
+    
+     <!-- Assest pipeline to CSS for home.html  -->
+     <% if controller_name == "application" && action_name == "home" %>
+     <%= stylesheet_link_tag "buddy" %>
+     <% end %>
+  
+  <style>
+img {
+  width: 50%;
+  height: auto;
+}
+</style>
+  
+
+    <div class="container">
+  <section class="cms-boxes">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 cms-boxes-outer">
+          <div class="cms-boxes-items cms-features">
+            <div class="boxes-align">
+              <div class="small-box">
+                <i class="fa fa-4x fa-laptop">&nbsp;</i>
+                <img src="images\avatar.jpg"></img>
+                <p>Student Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 cms-boxes-outer">
+          <div class="cms-boxes-items cms-features">
+            <div class="boxes-align">
+              <div class="small-box">
+                <i class="fa fa-4x fa-cog">&nbsp;</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+      <div class="row">
+        <div class="col-md-4 cms-boxes-outer">
+          <div class="cms-boxes-items cms-features">
+            <div class="boxes-align">
+              <div class="small-box">
+                <i class="fa fa-4x fa-laptop">&nbsp;</i>
+                <h2>Email</h2>
+                <p> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 cms-boxes-outer">
+          <div class="cms-boxes-items cms-features">
+            <div class="boxes-align">
+              <div class="small-box">
+                <i class="fa fa-4x fa-cog">&nbsp;</i>
+                <h2>Schedule</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 cms-boxes-outer">
+          <div class="cms-boxes-items cms-features">
+            <div class="boxes-align">
+              <div class="small-box">
+                <i class="fa fa-4x fa-laptop">&nbsp;</i>
+                <h2>Unfriend</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+  </section>
+</div>
+
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>

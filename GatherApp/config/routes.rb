@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   root to: "statics#home"
   
   get 'friends', to: 'statics#friends'
+  get 'buddy', to: 'statics#buddy'
   
-  # get 'buddy', to: 'statics#buddy'
   # get 'chat', to: 'statics#chat'
   # get 'tasks', to: 'statics#tasks'
   # get 'map', to: 'statics#map'
