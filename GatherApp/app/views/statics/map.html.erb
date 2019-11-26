@@ -1,0 +1,97 @@
+
+
+    
+    <script type="text/javascript"
+//
+// *** FIX THE LINE BELOW TO USE YOU GOOGLE MAPS API KEY
+//
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVvZXTrkCdlM9xZfsNuTwq_UaOJPKlwUo">
+    </script>
+
+    <script type="text/javascript">
+
+var my_locations =[
+  ["Student Center",
+   "4800 Calhoun Rd, Houston, TX 77004",
+   29.720312, -95.340667,"A","0033cc"],
+  ["Library",
+   "4800 Calhoun Rd, Houston, TX 77004",
+   29.721262, -95.342062,"B","0033cc"],
+];
+var image_array= new Array();
+function initialize() {
+// make a table for the text below the map
+  os="<table border='0'><tr><td colspan='2'><center><b>Locations of Campus</td></tr>";
+// create the map
+  var map = new google.maps.Map(document.getElementById("map_canvas"));
+// create the bounds objects (to hold all the lat and lng values to find the extent of the map
+  var bounds = new google.maps.LatLngBounds();
+// loop through all the locations in the b_locations array
+  for (i=0; i  < my_locations.length; i++)
+       {
+        // create the lat lng object for this location
+           var thisLatLng = new google.maps.LatLng(my_locations[i][2], my_locations[i][3]);
+        // add the lat/lng for this location to the list of bounds
+           bounds.extend(thisLatLng);
+        // create an image array object in the ith location of the image_array
+           image_array [i]= new Image();
+        // specify the marker letter and the color of this location and store the image in an array
+           image_array[i].src = 'http://www.googlemapsmarkers.com/v1/'+my_locations[i][4]+"/"+my_locations[i][5]+'/';
+        // create the marker           /
+           createMarker(i,thisLatLng,map);
+        // add the data to the table
+        os=os+"<tr><td valign='top'><img src='"+image_array[i].src+"'></td><td><b>"+my_locations[i][0]+"</b><br>"+my_locations[i][1]+"</td></tr>";
+       }
+// fit the map to the bounds data
+  map.fitBounds(bounds);
+// end the table and display it in the DIV block with id="sol"
+  sol.innerHTML=os+"</table>";
+}
+function createMarker(k,theLatLng,map)
+{
+// this functions gets: k is the index (row) of the location, lat/lng, map object
+//
+//  *** we use this function so that each marker has its own listener
+//  *** see this: http://stackoverflow.com/questions/15774011/googlemaps-the-addlistener-is-only-working-for-the-last-marker?rq=1
+//
+  var marker = new google.maps.Marker({
+            position: theLatLng,             // sets the lat/lng of the marker
+            map: map,                        // sets the map object
+            icon: image_array[k].src,        // sets the marker image
+            title: my_locations[k][0]        // gets the tooltip text
+            });
+//
+// *** when the marker is clicked we zoom in and reset the center of the map to the marker co-ordinates
+//
+  google.maps.event.addListener(marker, 'click', function() {  // what to do when the used clicks the marker
+            map.setZoom(16);                                   // zoom to level 16
+            map.setCenter(theLatLng);                          // set the center of the map to the marker location
+            });
+}
+</script>
+    
+
+
+<div onload="initialize()">
+  
+
+
+<!--- the map is define on the page as a DIV block with id="map_canvas" and is 700 by 700 pixels with a black border -->
+
+<div id="map_canvas" style="border:solid black;1px;height:700px;width:1250px;"></div>
+<p>
+<!--- the table is displayed below the map in a DIV block with id="sol" and is 700 pixels wide with a black border -->
+<div id="sol" style="border:solid black;1px;width:1250px;">
+<p>
+</div>
+
+
+
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
