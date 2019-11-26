@@ -1,14 +1,7 @@
 User.create!([
-  {email: "nick@nick.com", encrypted_password: "$2a$11$DU0QJBQ5NE2sUB16JDf6x.wDCudh36EsREQcKofnsfMqpd.NQ9KPy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 1},
-  {email: "nick2@nick", encrypted_password: "$2a$11$VGE.gcfezqjqGrB7v09xGeVQfdPdQzZ5FO.uxRU/HrDOfRz3MkLq2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 0},
-  {email: "nick3@nick.com", encrypted_password: "$2a$11$RreMp/foIsMUqg/74aBIXeWl8a0oScNTfPtelrQtkXGWO.fj/R5Kq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, admin: 0}
-])
-Admin.create!([
-  {admin_first_name: "Michael", admin_last_name: "Schmeler", admin_email: "simon_beer@runolfon.biz"},
-  {admin_first_name: "Meggan", admin_last_name: "Jaskolski", admin_email: "raina@gerholdwalker.co"},
-  {admin_first_name: "Eusebia", admin_last_name: "Lind", admin_email: "tifany_becker@torp.net"},
-  {admin_first_name: "Willis", admin_last_name: "Turner", admin_email: "celina.harvey@osinskikeler.co"},
-  {admin_first_name: "Pamula", admin_last_name: "Erdman", admin_email: "cheryll_schowalter@rutherfordmurazik.org"}
+  {email: "nick@nick.com", password: 'fuckyou', encrypted_password: "$2a$11$DU0QJBQ5NE2sUB16JDf6x.wDCudh36EsREQcKofnsfMqpd.NQ9KPy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil},
+  {email: "nick2@nick", password: 'fuckyou', encrypted_password: "$2a$11$VGE.gcfezqjqGrB7v09xGeVQfdPdQzZ5FO.uxRU/HrDOfRz3MkLq2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil},
+  {email: "nick3@nick.com", password: 'fuckyou', encrypted_password: "$2a$11$RreMp/foIsMUqg/74aBIXeWl8a0oScNTfPtelrQtkXGWO.fj/R5Kq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
 ])
 Buddy.create!([
   {buddy_first_name: "Keneth", buddy_last_name: "Nienow", buddy_email: "carolin.walsh@pacocha.com"},
